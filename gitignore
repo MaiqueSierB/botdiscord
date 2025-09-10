@@ -1,0 +1,11 @@
+# Ficheiro de variáveis de ambiente (contém o TOKEN!)
+# Esta é a linha mais importante para a segurança.
+.env
+
+# Pasta das dependências (é recriada com o comando "npm install")
+# Impede o envio de centenas de megabytes de ficheiros desnecessários.
+node_modules/
+
+# Ficheiro da base de dados (os seus dados, não o seu código)
+# É uma boa prática manter os dados separados do código.
+servidor.sqlite
