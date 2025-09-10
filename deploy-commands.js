@@ -22,6 +22,19 @@ const commands = [
         .setDescription("URL de uma imagem para o cartão de aniversário (opcional)")
         .setRequired(false)),
   
+  // NOVO COMANDO PARA ADICIONAR APENAS A FOTO
+  new SlashCommandBuilder()
+    .setName("addphoto")
+    .setDescription("Adiciona ou altera a foto de um aniversariante já registado")
+    .addUserOption(option =>
+        option.setName("usuario")
+            .setDescription("O usuário para adicionar a foto")
+            .setRequired(true))
+    .addStringOption(option =>
+        option.setName("imagem")
+            .setDescription("O novo URL da imagem para o cartão")
+            .setRequired(true)),
+
   new SlashCommandBuilder()
     .setName("removebirthday")
     .setDescription("Remove o aniversário de um usuário")
@@ -47,7 +60,6 @@ const commands = [
         )
     ),
   
-  // NOVO COMANDO ADICIONADO AQUI
   new SlashCommandBuilder()
     .setName("nextbirthday")
     .setDescription("Mostra qual é o próximo aniversário"),
